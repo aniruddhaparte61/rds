@@ -1,0 +1,36 @@
+{ 
+"Resources": {
+        "MyDB": {
+            "Type": "AWS::RDS::DBInstance",
+            "Properties": {
+                "AllocatedStorage": "20",
+                "AvailabilityZone": "us-east-1a",
+                "DBInstanceClass": "db.m4.large",
+                "DBInstanceIdentifier": "mydbinst8",
+                "DBName": "mydbinst8",
+                "DeleteAutomatedBackups": true,
+                "Engine": "MySQL",
+				"EngineVersion" : "5.7.22",
+                "MasterUsername": "pikachu123",
+                "MasterUserPassword": "pikachu123",
+                "Port": "3306",
+                "PubliclyAccessible": true,
+				"VPCSecurityGroups" : [ { "Fn::GetAtt": [ "DBEC2SecurityGroup", "GroupId" ]}]
+        }
+		},
+		
+		"DBEC2SecurityGroup": {
+					"Type": "AWS::EC2::SecurityGroup",
+					"Properties" : {
+							"GroupDescription": "Open database for access",
+							"SecurityGroupIngress" : [{
+										"IpProtocol" : "tcp",
+										"FromPort" : "3306",
+										"ToPort" : "3306",
+										"CidrIp" : "202.189.245.70/32"
+        }]
+      }
+    }
+		 
+    }
+}
