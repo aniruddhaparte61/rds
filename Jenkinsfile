@@ -1,22 +1,9 @@
-pipeline{
-	agent any
-	stages{
-	stage('Clone Repo') {
-		steps {
-			sh "export AWS_DEFAULT_REGION=us-east-1"
-			sh "aws cloudformation create-stack --stack-name Group51stack --template-body file://rds.json --region 'us-east-1'"
-			}
-	}
-		stage('Test'){
-			steps{
-				sh "ls"
-			}
-		}
-		stage('Deploy'){
-			steps{
-				sh "ls"
-			}
-		}
-	
-	}
-}
+    
+pipeline{agent any 
+  stages{ stage('Clone Repo') 
+          { steps 
+                  { sh "export AWS_DEFAULT_REGION=us-east-1"
+                    sh "aws cloudformation create-stack --stack-name ${params.stackname} --template-body file://rds.json --region ${params.region}" --parameters file://params.json}
+           }
+         }
+      }
