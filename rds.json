@@ -30,7 +30,7 @@
             "Type": "AWS::RDS::DBInstance",
             "Properties": {
                 "AllocatedStorage": { "Ref" : "DBAllocatedStorage" },
-                "AvailabilityZone": "us-east-1a,"
+                "AvailabilityZone": "us-east-1a",
                 "DBInstanceClass": "db.m4.large",
                 "DBInstanceIdentifier": { "Ref" : "DBInstanceIdentifier" },
                 "DBName": { "Ref" : "DBName" },
