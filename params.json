@@ -21,7 +21,7 @@
         },
         {
             "ParameterKey": "DBAvailabilityZone",
-            "ParameterValue": "${params.dbAvailability zone}"
+            "ParameterValue": "${params.dbAvailabilityzone}"
         },
 		{
             "ParameterKey": "DBInstanceIdentifier",
