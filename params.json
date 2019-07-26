@@ -15,14 +15,6 @@
             "ParameterKey": "DBAllocatedStorage",
             "ParameterValue": "${params.dbstorage}"
         },
-        {
-            "ParameterKey": "DBInstanceClass",
-            "ParameterValue": "${params.dbinstanceclass}"
-        },
-        {
-            "ParameterKey": "DBAvailabilityZone",
-            "ParameterValue": "${params.dbAvailabilityzone}"
-        },
 		{
             "ParameterKey": "DBInstanceIdentifier",
             "ParameterValue": "${params.dbInstancesIdentifier}"
