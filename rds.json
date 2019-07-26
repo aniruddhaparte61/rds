@@ -21,8 +21,7 @@
       "Description" : "The database admin account password",
       "Type": "String",
       "MinLength": "1",
-      "MaxLength": "41",
-      "AllowedPattern" : "[a-zA-Z0-9]+"
+      "MaxLength": "41"
     },
 
     "DBAllocatedStorage": {
