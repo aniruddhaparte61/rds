@@ -1,20 +1,17 @@
 { 
 "Parameters": {
     "DBName": {
-      "Default": "MyDatabase",
       "Description" : "The database name",
       "Type": "String",
       "MinLength": "1",
-      "MaxLength": "64",
-      "AllowedPattern" : "[a-zA-Z][a-zA-Z0-9]*"
+      "MaxLength": "64"
     },
 
     "DBUser": {
       "Description" : "The database admin account username",
       "Type": "String",
       "MinLength": "1",
-      "MaxLength": "16",
-      "AllowedPattern" : "[a-zA-Z][a-zA-Z0-9]*"
+      "MaxLength": "16"
     },
 
     "DBPassword": {
@@ -25,11 +22,8 @@
     },
 
     "DBAllocatedStorage": {
-      "Default": "5",
       "Description" : "The size of the database (Gb)",
-      "Type": "Number",
-      "MinValue": "5",
-      "MaxValue": "1024"
+      "Type": "Number"
       },
 	  
     "DBInstanceClass": {
@@ -41,7 +35,7 @@
       "Type": "String"
 	},
 	"DBInstanceIdentifier": {
-	"Description" : "Select Zone",
+	"Description" : "Gives new name to identifier",
     "Type": "String"
 	}
   },
