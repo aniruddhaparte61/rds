@@ -2,41 +2,27 @@
 "Parameters": {
     "DBName": {
       "Description" : "The database name",
-      "Type": "String",
-      "MinLength": "1",
-      "MaxLength": "64"
+      "Type": "String"
     },
-
+	
     "DBUser": {
       "Description" : "The database admin account username",
-      "Type": "String",
-      "MinLength": "1",
-      "MaxLength": "16"
+      "Type": "String"
     },
 
     "DBPassword": {
       "Description" : "The database admin account password",
-      "Type": "String",
-      "MinLength": "1",
-      "MaxLength": "41"
-    },
+      "Type": "String"
+     },
 
     "DBAllocatedStorage": {
       "Description" : "The size of the database (Gb)",
-      "Type": "Number"
+      "Type": "String"
       },
 	  
-    "DBInstanceClass": {
-      "Description" : "The database instance type",
+    "DBInstanceIdentifier": {
+      "Description" : "Select Zone",
       "Type": "String"
-    },
-	"DBAvailabilityZone": {
-	 "Description" : "Select Zone",
-      "Type": "String"
-	},
-	"DBInstanceIdentifier": {
-	"Description" : "Gives new name to identifier",
-    "Type": "String"
 	}
   },
 "Resources": {
@@ -44,13 +30,13 @@
             "Type": "AWS::RDS::DBInstance",
             "Properties": {
                 "AllocatedStorage": { "Ref" : "DBAllocatedStorage" },
-                "AvailabilityZone": { "Ref" : "DBAvailabilityZone" },
-                "DBInstanceClass": { "Ref" : "DBInstanceClass" },
+                "AvailabilityZone": "us-east-1a,"
+                "DBInstanceClass": "db.m4.large",
                 "DBInstanceIdentifier": { "Ref" : "DBInstanceIdentifier" },
                 "DBName": { "Ref" : "DBName" },
                 "DeleteAutomatedBackups": true,
                 "Engine": "MySQL",
-				"EngineVersion" : "5.7.22",
+		"EngineVersion" : "5.7.22",
                 "MasterUsername": { "Ref" : "DBUser" },
                 "MasterUserPassword": { "Ref" : "DBPassword" },
                 "Port": "3306",
