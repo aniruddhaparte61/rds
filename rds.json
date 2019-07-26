@@ -14,6 +14,15 @@
       "Description" : "The database admin account password",
       "Type": "String"
      },
+
+    "DBAllocatedStorage": {
+    "Description" : "The size of the database (Gb)",
+    "Type": "Number"
+    },
+"DBInstanceClass": {
+      "Description" : "The database instance type",
+      "Type": "String"
+    },
 	
     "DBInstanceIdentifier": {
       "Description" : "Select Zone",
@@ -24,9 +33,9 @@
         "MyDB": {
             "Type": "AWS::RDS::DBInstance",
             "Properties": {
-                "AllocatedStorage": "8" ,
+                "AllocatedStorage": { "Ref" : "DBAllocatedStorage" } ,
                 "AvailabilityZone": "us-east-1a",
-                "DBInstanceClass": "db.m4.large",
+                "DBInstanceClass": { "Ref" : "DBInstanceClass" },
                 "DBInstanceIdentifier": { "Ref" : "DBInstanceIdentifier" },
                 "DBName": { "Ref" : "DBName" },
                 "DeleteAutomatedBackups": true,
