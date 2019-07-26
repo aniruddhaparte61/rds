@@ -15,6 +15,10 @@
             "ParameterKey": "DBAllocatedStorage",
             "ParameterValue": "${params.dbstorage}"
         },
+	{
+            "ParameterKey": "DBInstanceClass",
+            "ParameterValue": "${params.dbinstanceclass}"
+        },
 		{
             "ParameterKey": "DBInstanceIdentifier",
             "ParameterValue": "${params.dbInstancesIdentifier}"
