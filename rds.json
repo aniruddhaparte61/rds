@@ -14,12 +14,7 @@
       "Description" : "The database admin account password",
       "Type": "String"
      },
-
-    "DBAllocatedStorage": {
-      "Description" : "The size of the database (Gb)",
-      "Type": "Number"
-      },
-	  
+	
     "DBInstanceIdentifier": {
       "Description" : "Select Zone",
       "Type": "String"
@@ -29,7 +24,7 @@
         "MyDB": {
             "Type": "AWS::RDS::DBInstance",
             "Properties": {
-                "AllocatedStorage": { "Ref" : "DBAllocatedStorage" },
+                "AllocatedStorage": "8" ,
                 "AvailabilityZone": "us-east-1a",
                 "DBInstanceClass": "db.m4.large",
                 "DBInstanceIdentifier": { "Ref" : "DBInstanceIdentifier" },
