@@ -1,0 +1,30 @@
+[
+        {
+            "ParameterKey": "DBName",
+            "ParameterValue": "${params.dbname}"
+        },
+        {
+            "ParameterKey": "DBUser",
+            "ParameterValue": "${params.dbusername}"
+        },
+        {
+            "ParameterKey": "DBPassword",
+            "ParameterValue": "${params.dbpassword}"
+        },
+        {
+            "ParameterKey": "DBAllocatedStorage",
+            "ParameterValue": "${params.dbstorage}"
+        },
+        {
+            "ParameterKey": "DBInstanceClass",
+            "ParameterValue": "${params.dbinstanceclass}"
+        },
+        {
+            "ParameterKey": "DBAvailabilityZone",
+            "ParameterValue": "${params.dbAvailabilityzone}"
+        },
+		{
+            "ParameterKey": "DBInstanceIdentifier",
+            "ParameterValue": "${params.dbInstancesIdentifier}"
+        }
+]
