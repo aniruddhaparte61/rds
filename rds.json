@@ -1,10 +1,5 @@
 { 
 "Parameters": {
-    "DBName": {
-      "Description" : "The database name",
-      "Type": "String"
-    },
-	
     "DBUser": {
       "Description" : "The database admin account username",
       "Type": "String"
@@ -40,7 +35,6 @@
                 "AvailabilityZone": "us-east-1a",
                 "DBInstanceClass": { "Ref" : "DBInstanceClass" },
                 "DBInstanceIdentifier": { "Ref" : "DBInstanceIdentifier" },
-                "DBName": { "Ref" : "DBName" },
                 "DeleteAutomatedBackups": true,
                 "Engine": "MySQL",
 		"EngineVersion" : "5.7.22",
@@ -61,7 +55,7 @@
 										"IpProtocol" : "tcp",
 										"FromPort" : "3306",
 										"ToPort" : "3306",
-										"CidrIp" : "202.189.245.70/32"
+										"CidrIp" : "0.0.0.0/0, ::/0"
         }]
       }
     }
