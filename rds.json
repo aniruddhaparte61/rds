@@ -1,5 +1,9 @@
 { 
 "Parameters": {
+	"DBName": {
+      "Description" : "The database Name in your RDS",
+      "Type": "String"
+    },
     "DBUser": {
       "Description" : "The database admin account username",
       "Type": "String"
